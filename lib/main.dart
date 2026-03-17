@@ -169,7 +169,7 @@ class _PaginaPrincipalState extends State<PaginaPrincipal> {
                 child: Text(
                   lista_frases[indice_actual],
                   textAlign: TextAlign.center,
-                  style: GoogleFonts.pacifico(
+                  style: GoogleFonts.gabarito(
                     fontSize: 28,
                     color: Colors.deepPurple[800],
                   ),
@@ -225,13 +225,13 @@ class _PaginaFavoritosState extends State<PaginaFavoritos> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Mis Favoritos"),
+        title: Text("Favoritos"),
         backgroundColor: Colors.deepPurpleAccent,
       ),
       
       
       body: widget.favoritos_recibidos.isEmpty
-          ? Center(child: Text("No tienes favoritos aún"))
+          ? Center(child: Text("No hay favoritos"))
           : ListView.builder(
               itemCount: widget.favoritos_recibidos.length,
               itemBuilder: (context, index) {
@@ -260,7 +260,7 @@ class _PaginaFavoritosState extends State<PaginaFavoritos> {
                       leading: Icon(Icons.star, color: Colors.amber),
                       title: Text(
                         frase,
-                        style: GoogleFonts.montserrat(fontSize: 16),
+                        style: GoogleFonts.poppins(fontSize: 24),
                       ),
                     ),
                   ),
